@@ -1,0 +1,40 @@
+{
+    "name": "(Project Name)",
+    
+    "dockerFile": "Dockerfile",
+    
+    "context": "..",
+    
+    "appPort": 3000,
+    
+    "mounts": [
+        "source=//var/run/docker.sock,target=/var/run/docker.sock,type=bind,consistency=cached",
+        "source=//etc/group,target=/etc/group,type=bind,consistency=cached,ro",
+        "source=//etc/passwd,target=/etc/passwd,type=bind,consistency=cached,ro"
+    ],
+
+    // Default path to open when attaching to a new container.
+    "workspaceFolder": "/app",
+
+    // Add the IDs of extensions you want installed when the container is created.
+    "extensions": [
+        "GitHub.copilot", 
+        "mechatroner.rainbow-csv", 
+        "oderwat.indent-rainbow", 
+        "SonarSource.sonarlint-vscode",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "redhat.vscode-yaml"
+    ],
+
+    // An array port numbers to forward
+    "forwardPorts": [8000],
+
+    // Container user VS Code should use when connecting
+    "remoteUser": "root",
+
+    // Set environment variables for VS Code and sub-processes
+    "remoteEnv": {
+        "JAVA_HOME": "/usr/lib/jvm/java-1.11.0-openjdk-amd64" 
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+        "GitHub.copilot", 
+        "mechatroner.rainbow-csv", 
+        "oderwat.indent-rainbow", 
+        "SonarSource.sonarlint-vscode"
+    ]
+}

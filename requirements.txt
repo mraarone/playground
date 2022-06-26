@@ -1,0 +1,11 @@
+datasets
+transformers
+huggingface_hub
+setuptools 
+wheel
+spacey
+bandit
+cookiecutter
+
+djitellopy
+opencv-python
