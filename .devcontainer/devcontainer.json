@@ -13,6 +13,9 @@
         "source=//etc/passwd,target=/etc/passwd,type=bind,consistency=cached,ro"
     ],
 
+    // Stop the container from automatically shutting down when vscode is closed.
+    "shutdownAction": "none",
+
     // Default path to open when attaching to a new container.
     "workspaceFolder": "/app",
 
