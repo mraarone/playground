@@ -6,17 +6,19 @@ def run_tello():
 
     tello.connect()
 
-    tello.takeoff()
-    tello.move_left(100)
-    tello.rotate_ccw(90)
-    tello.move_forward(100)
-    tello.land()
+    # tello.takeoff()
+    # tello.move_left(100)
+    # tello.rotate_ccw(90)
+    # tello.move_forward(100)
+    # tello.land()
+
+    tello.get_battery()
 
     tello.end()
 
 def main():
-    #run_tello()
-    tello.get_battery()
+    run_tello()
+    
 
 if __name__ == '__main__':
     main()
