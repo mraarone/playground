@@ -1,5 +1,6 @@
-##To connect on another computer, open port 2375 on the server, and use this code in **settings,hjson**.
-```
+# To connect on another computer, open port 2375 on the server, and use this code in **settings,hjson**
+
+```json
     {
         "remote.extensionKind": {
             "ms-azuretools.vscode-docker": [ "ui" ],
