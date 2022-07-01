@@ -1,6 +1,8 @@
 # Sandbox
 
-## To connect on another computer, open port 2375 on the server, and use this code in **settings,hjson**
+## Remote Connections
+
+To connect on another computer, open port 2375 on the server, and use this code in **settings,hjson**
 
 ```json
 {
