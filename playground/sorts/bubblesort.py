@@ -22,21 +22,18 @@ class BubbleSort:
         print(self.array)
 
 
-# The BubbleSort class has a sort method that returns a sorted array.
-class BubbleSortTest(unittest.TestCase):
-    def test_sort(self):
-        array = numpy.array([5, 3, 1, 4, 2])
-        self.assertEqual(BubbleSort(array).sort(), [1, 2, 3, 4, 5])
-
-
 def run():
-    # Generate random array
-    array = numpy.random.randint(0, 100, 10)
+    print("bubblesort: running...")
 
-    # Create BubbleSort object
+    array = numpy.array([5, 3, 1, 4, 2])
     print(BubbleSort(array).sort())
+
+    # # Generate random array
+    # array = numpy.random.randint(0, 100, 10)
+
+    # # Create BubbleSort object
+    # print(BubbleSort(array).sort())
 
 
 if __name__ == "__main__":
-    print("bubblesort: running...")
     run()

@@ -1,8 +1,9 @@
-from playground import data, sorts
+from playground.data import datastructures
+from playground.sorts import bubblesort, mergesort, selectionsort
 
 
 def run():
-    data.datastructures.run()
-    sorts.bubblesort.run()
-    sorts.mergesort.run()
-    sorts.selectionsort.run()
+    datastructures.run()
+    bubblesort.run()
+    mergesort.run()
+    selectionsort.run()

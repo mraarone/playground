@@ -35,25 +35,15 @@ class SelectionSort:
         print(self.array)
 
 
-# SelectionSortTest is a subclass of unittest.TestCase, and it has one method, test_sort, which asserts
-# that the sort method of SelectionSort returns a sorted array.
-class SelectionSortTest(unittest.TestCase):
-    def test_sort(self):
-        """
-        It tests that the SelectionSort class properly sorts the array in ascending order.
-        """
-        array = numpy.array([5, 3, 1, 4, 2])
-        self.assertEqual(SelectionSort(array).sort(), [1, 2, 3, 4, 5])
-
-
 def run():
     """
     It sorts the array in ascending order.
     """
+    print("selectionsort: running...")
+
     array = numpy.array([5, 3, 1, 4, 2])
     print(SelectionSort(array).sort())
 
 
 if __name__ == "__main__":
-    print("selectionsort: running...")
     run()

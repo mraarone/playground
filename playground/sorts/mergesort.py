@@ -31,41 +31,34 @@ class MergeSort:
         :param right: the right half of the array
         :return: The result of the merge sort.
         """
-        result = []
+        result = numpy.array([], dtype=self.array.dtype)
 
         while len(left) > 0 and len(right) > 0:
+            result.resize(len(result) + 1)
             if left[0] < right[0]:
-                result.append(left[0])
+                result[-1] = left[0]
                 left = left[1:]
             else:
-                result.append(right[0])
+                result[-1] = right[0]
                 right = right[1:]
         if len(left) > 0:
-            result.extend(left)
+            result.resize(len(result) + len(left))
+            result[-len(left) :] = left
         if len(right) > 0:
-            result.extend(right)
+            result.resize(len(result) + len(right))
+            result[-len(right) :] = right
         return result
-
-
-# MergeSortTest is a subclass of unittest.TestCase, and it has one method, test_sort, which asserts
-# that the sort method of MergeSort returns a sorted array.
-class MergeSortTest(unittest.TestCase):
-    def test_sort(self):
-        """
-        It tests that the MergeSort class properly sorts the array in ascending order.
-        """
-        array = numpy.array([5, 3, 1, 4, 2])
-        self.assertEqual(MergeSort(array).sort(), [1, 2, 3, 4, 5])
 
 
 def run():
     """
     It sorts the array in ascending order.
     """
+    print("mergesort: running...")
+
     array = numpy.array([5, 3, 1, 4, 2])
     print(MergeSort(array).sort())
 
 
 if __name__ == "__main__":
-    print("mergesort: running...")
     run()
