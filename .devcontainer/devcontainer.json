@@ -26,7 +26,7 @@
         "mechatroner.rainbow-csv",
         "oderwat.indent-rainbow",
         "SonarSource.sonarlint-vscode",
-        "redhat.vscode-yaml"
+        "redhat.vscode-yaml",
         "GitHub.copilot",
         "mintlify.document"
     ],
