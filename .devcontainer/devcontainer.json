@@ -27,7 +27,8 @@
         "SonarSource.sonarlint-vscode",
         "ms-python.python",
         "ms-python.vscode-pylance",
-        "redhat.vscode-yaml"
+        "redhat.vscode-yaml",
+        "mintlify.document"
     ],
 
     // An array port numbers to forward

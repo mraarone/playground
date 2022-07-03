@@ -1,4 +1,5 @@
 import numpy
+import unittest
 
 # We split the array in half, sort each half, and then merge the two sorted halves
 class MergeSort:
@@ -29,6 +30,7 @@ class MergeSort:
         :return: The result of the merge sort.
         """
         result = []
+        
         while len(left) > 0 and len(right) > 0:
             if left[0] < right[0]:
                 result.append(left[0])
@@ -42,11 +44,21 @@ class MergeSort:
             result.extend(right)
         return result
 
+# MergeSortTest is a subclass of unittest.TestCase, and it has one method, test_sort, which asserts
+# that the sort method of MergeSort returns a sorted array.
+class MergeSortTest(unittest.TestCase):
+    def test_sort(self):
+        """
+        It tests that the MergeSort class properly sorts the array in ascending order.
+        """
+        array = numpy.array([5, 3, 1, 4, 2])
+        self.assertEqual(MergeSort(array).sort(), [1, 2, 3, 4, 5])
+
 def main():
     """
     It sorts the array in ascending order.
     """
-    array = [5, 3, 1, 4, 2]
+    array = numpy.array([5, 3, 1, 4, 2])
     print(MergeSort(array).sort())
 
 if __name__ == "__main__":
