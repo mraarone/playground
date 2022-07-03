@@ -1,7 +1,3 @@
-isort
-bandit
-cookiecutter
-
 huggingface_hub
 datasets
 transformers

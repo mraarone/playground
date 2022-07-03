@@ -23,6 +23,8 @@ RUN apt-get install git -y
 WORKDIR /app
 ADD . /app
 RUN python3 -m pip install --upgrade pip
+RUN python3 -m pip install pre-commit isort bandit black mypy flake8
+RUN pre-commit install
 RUN python3 -m pip install -r requirements.txt
 
 # Enable the virtual environment and run.
