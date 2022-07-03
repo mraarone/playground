@@ -1,12 +1,13 @@
-datasets
-transformers
-huggingface_hub
-setuptools 
-wheel
-spacey
+isort
 bandit
 cookiecutter
 
-djitellopy
+huggingface_hub
+datasets
+transformers
+
+setuptools 
+wheel
+spacey
+
 opencv-python
-pytest
