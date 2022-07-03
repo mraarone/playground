@@ -1,8 +1,11 @@
 {
-    "recommendations": [
-        "GitHub.copilot", 
-        "mechatroner.rainbow-csv", 
-        "oderwat.indent-rainbow", 
-        "SonarSource.sonarlint-vscode"
-    ]
+    // "recommendations": [
+    //     "ms-python.python",
+    //     "ms-python.vscode-pylance",
+    //     "mechatroner.rainbow-csv",
+    //     "oderwat.indent-rainbow",
+    //     "SonarSource.sonarlint-vscode",
+    //     "redhat.vscode-yaml"
+    //     "GitHub.copilot",
+    // ]
 }
