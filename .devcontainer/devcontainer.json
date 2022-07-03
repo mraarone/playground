@@ -19,16 +19,16 @@
     // Default path to open when attaching to a new container.
     "workspaceFolder": "/app",
 
-    // Add the IDs of extensions you want installed when the container is created.
-    "extensions": [
-        "GitHub.copilot", 
-        "mechatroner.rainbow-csv", 
-        "oderwat.indent-rainbow", 
-        "SonarSource.sonarlint-vscode",
-        "ms-python.python",
-        "ms-python.vscode-pylance",
-        "redhat.vscode-yaml"
-    ],
+    // // Add the IDs of extensions you want installed when the container is created.
+    // "extensions": [
+    //     "GitHub.copilot", 
+    //     "mechatroner.rainbow-csv", 
+    //     "oderwat.indent-rainbow", 
+    //     "SonarSource.sonarlint-vscode",
+    //     "ms-python.python",
+    //     "ms-python.vscode-pylance",
+    //     "redhat.vscode-yaml"
+    // ],
 
     // An array port numbers to forward
     "forwardPorts": [8000],
