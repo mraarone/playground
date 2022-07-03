@@ -1,12 +1,14 @@
-import numpy
 import unittest
+
+import numpy
+
 
 # SelectionSort class
 class SelectionSort:
     def __init__(self, array):
         """
         It initializes the array and the size of the array.
-        
+
         :param array: The array to be sorted
         """
         self.array = array
@@ -32,6 +34,7 @@ class SelectionSort:
         """
         print(self.array)
 
+
 # SelectionSortTest is a subclass of unittest.TestCase, and it has one method, test_sort, which asserts
 # that the sort method of SelectionSort returns a sorted array.
 class SelectionSortTest(unittest.TestCase):
@@ -42,12 +45,14 @@ class SelectionSortTest(unittest.TestCase):
         array = numpy.array([5, 3, 1, 4, 2])
         self.assertEqual(SelectionSort(array).sort(), [1, 2, 3, 4, 5])
 
+
 def main():
     """
     It sorts the array in ascending order.
     """
     array = numpy.array([5, 3, 1, 4, 2])
     print(SelectionSort(array).sort())
+
 
 if __name__ == "__main__":
     main()

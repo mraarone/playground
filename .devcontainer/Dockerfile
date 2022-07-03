@@ -1,7 +1,7 @@
 FROM tensorflow/tensorflow
 
 #
-# EXPOSE port 
+# EXPOSE port
 
 # Install Docker for Docker-in-Docker
 RUN apt-get update && \
@@ -28,4 +28,4 @@ RUN pre-commit install
 RUN python3 -m pip install -r requirements.txt
 
 # Enable the virtual environment and run.
-CMD ["bash -c python -m venv .env && source .env/bin/activate"] 
+CMD ["bash -c python -m venv .env && source .env/bin/activate"]

@@ -1,9 +1,9 @@
-huggingface_hub
 datasets
-transformers
-
-setuptools 
-wheel
-spacey
+huggingface_hub
 
 opencv-python
+
+setuptools
+spacey
+transformers
+wheel

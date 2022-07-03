@@ -1,5 +1,7 @@
-import numpy
 import unittest
+
+import numpy
+
 
 # BubbleSort class that uses numpy arrays
 class BubbleSort:
@@ -10,7 +12,7 @@ class BubbleSort:
     # Bubble sort algorithm
     def sort(self):
         for _ in range(self.array_size):
-            for _ in range(self.array_size - 1):
+            for j in range(self.array_size - 1):
                 if self.array[j] > self.array[j + 1]:
                     self.array[j], self.array[j + 1] = self.array[j + 1], self.array[j]
         return self.array
@@ -19,11 +21,13 @@ class BubbleSort:
     def print_array(self):
         print(self.array)
 
+
 # The BubbleSort class has a sort method that returns a sorted array.
 class BubbleSortTest(unittest.TestCase):
     def test_sort(self):
         array = numpy.array([5, 3, 1, 4, 2])
         self.assertEqual(BubbleSort(array).sort(), [1, 2, 3, 4, 5])
+
 
 def main():
     # Generate random array
@@ -31,3 +35,7 @@ def main():
 
     # Create BubbleSort object
     print(BubbleSort(array).sort())
+
+
+if __name__ == "__main__":
+    main()
