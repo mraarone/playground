@@ -353,3 +353,11 @@ class KNN:
         """
         self.print_accuracy()
         self.print_predictions()
+
+
+def run():
+    print("datastructures: running...")
+
+
+if __name__ == "__main__":
+    run()

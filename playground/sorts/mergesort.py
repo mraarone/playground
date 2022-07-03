@@ -58,7 +58,7 @@ class MergeSortTest(unittest.TestCase):
         self.assertEqual(MergeSort(array).sort(), [1, 2, 3, 4, 5])
 
 
-def main():
+def run():
     """
     It sorts the array in ascending order.
     """
@@ -67,4 +67,5 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    print("mergesort: running...")
+    run()

@@ -29,7 +29,7 @@ class BubbleSortTest(unittest.TestCase):
         self.assertEqual(BubbleSort(array).sort(), [1, 2, 3, 4, 5])
 
 
-def main():
+def run():
     # Generate random array
     array = numpy.random.randint(0, 100, 10)
 
@@ -38,4 +38,5 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    print("bubblesort: running...")
+    run()
