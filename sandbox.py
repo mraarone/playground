@@ -109,6 +109,8 @@ class TestParkingLot(unittest.TestCase):
         park_zone.park(scooter)
         park_zone.list_parked_vehicles()
 
+def main():
+    unittest.main()
 
 if __name__ == "__main__":
-    unittest.main()
+    main()
