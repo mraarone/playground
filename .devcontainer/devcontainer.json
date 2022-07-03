@@ -21,13 +21,13 @@
 
     // Add the IDs of extensions you want installed when the container is created.
     "extensions": [
-        "GitHub.copilot",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
         "mechatroner.rainbow-csv",
         "oderwat.indent-rainbow",
         "SonarSource.sonarlint-vscode",
-        "ms-python.python",
-        "ms-python.vscode-pylance",
-        "redhat.vscode-yaml",
+        "redhat.vscode-yaml"
+        "GitHub.copilot",
         "mintlify.document"
     ],
 
