@@ -43,6 +43,9 @@ class MergeSort:
         return result
 
 def main():
+    """
+    It sorts the array in ascending order.
+    """
     array = [5, 3, 1, 4, 2]
     print(MergeSort(array).sort())
 
