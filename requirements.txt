@@ -1,5 +1,6 @@
-datasets
+torch
 huggingface_hub
+datasets
 
 opencv-python
 

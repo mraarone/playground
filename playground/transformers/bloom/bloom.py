@@ -18,3 +18,5 @@ logits = model(input_values).logits
 # take argmax and decode
 predicted_ids = torch.argmax(logits, dim=-1)
 transcription = processor.batch_decode(predicted_ids)
+
+print(transcription)
