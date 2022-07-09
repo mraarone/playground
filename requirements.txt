@@ -2,9 +2,13 @@ torch
 huggingface_hub
 datasets
 
+spacey
+transformers
+
+sklearn
+xgboost
 opencv-python
 
 setuptools
-spacey
-transformers
 wheel
+

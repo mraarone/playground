@@ -5,7 +5,7 @@
 
     "context": "..",
 
-    "appPort": 3000,
+    // "appPort": 3000,
 
     "mounts": [
         "source=//var/run/docker.sock,target=/var/run/docker.sock,type=bind,consistency=cached",
@@ -27,12 +27,13 @@
         "oderwat.indent-rainbow",
         "SonarSource.sonarlint-vscode",
         "redhat.vscode-yaml",
+        "ms-vscode.makefile-tools",
         "GitHub.copilot",
         "mintlify.document"
     ],
 
     // An array port numbers to forward
-    "forwardPorts": [8000],
+    // "forwardPorts": [8000],
 
     // Container user VS Code should use when connecting
     "remoteUser": "root",
