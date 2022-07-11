@@ -15,9 +15,6 @@ RUN apt-get install sudo
 
 # Install Java for Sonarlint
 RUN apt-get update -y
-RUN apt-get install openjdk-11-jre -y
-# RUN apt-get install openjdk-6-jre-headless -y
-RUN apt-get install git -y
 
 # Torch Dependencies
 
@@ -40,6 +37,15 @@ ENV VIRTUAL_ENV=/workspaces/playground
 RUN python3 -m venv $VIRTUAL_ENV
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
+### The rest installs in the virtual environment. ###
+
+# Install Git 
+RUN apt-get install git -y
+
+# Install Java for SonarLint
+RUN apt-get install openjdk-11-jre -y
+# RUN apt-get install openjdk-6-jre-headless -y
+
 RUN python3 -m pip install --upgrade pip
 RUN python3 -m pip install pre-commit isort bandit black mypy flake8
 RUN pre-commit install
@@ -51,4 +57,4 @@ RUN apt-get install libsndfile1 -y
 RUN python3 -m pip install librosa
 
 # Enable the virtual environment and run.
-CMD ["bash -c && . source .venv/bin/activate"]
+# CMD ["bash -c && . source .venv/bin/activate"]
