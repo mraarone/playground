@@ -28,7 +28,7 @@ RUN apt-get update -y
 # ADD . /worksapces/playground
 #
 WORKDIR /workspaces/playground
-ADD requirements.txt /workspaces/playground
+ADD . /workspaces/playground
 
 # Install Virtual Environment requirements
 RUN apt install python3.8-venv
