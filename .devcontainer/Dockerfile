@@ -24,9 +24,16 @@ RUN apt-get install git -y
 # Set up the Python environment and app locationm
 WORKDIR /app
 ADD . /app
+
+RUN python3 -m pip install virtualenv
+ENV VIRTUAL_ENV=/app/.venv
+RUN python3 -m venv $VIRTUAL_ENV
+ENV PATH="$VIRTUAL_ENV/bin:$PATH"
+
 RUN python3 -m pip install --upgrade pip
 RUN python3 -m pip install pre-commit isort bandit black mypy flake8
 RUN pre-commit install
+
 RUN python3 -m pip install -r requirements.txt
 
 # Install sound analysis libraries

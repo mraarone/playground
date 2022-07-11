@@ -7,7 +7,5 @@
             "source.organizeImports": true
         }
     },
-    "githubPullRequests.ignoredPullRequestBranches": [
-        "master"
-    ]
+    "python.terminal.activateEnvironment": true
 }
