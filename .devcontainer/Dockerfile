@@ -33,7 +33,7 @@ ADD . /workspaces/playground
 # Install Virtual Environment requirements
 RUN apt install python3.8-venv
 RUN python3 -m pip install virtualenv
-ENV VIRTUAL_ENV=/workspaces/playground
+ENV VIRTUAL_ENV=/opt/venv
 RUN python3 -m venv $VIRTUAL_ENV
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
