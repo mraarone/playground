@@ -18,15 +18,9 @@ RUN apt-get update -y
 
 # Torch Dependencies
 
-# Set up the Python environment and app locationm
-# You can't get away from the workspaces folder, CODESPACES_VIRTUAL_FOLDER isn't apparently changeable, therefore,
-# we mimic the behavior of the workspaces folder, and install the only files we need for set up. The project file 
-# folders will be copied automatically, by codespaces.
-#
-# *** If this doesn't work locally, that's why. ***
-# *** change the ADD line to: ***
-# ADD . /worksapces/playground
-#
+# Set up the Python environment and app location Note: You can't get away from the workspaces folder, 
+# The environment variable, "CODESPACES_VIRTUAL_FOLDER," isn't known to be changeable. The project file 
+# folders will be copied automatically, by codespaces, over this copy. But it is necessary for the build.
 WORKDIR /workspaces/playground
 ADD . /workspaces/playground
 
@@ -56,5 +50,5 @@ RUN python3 -m pip install -r requirements.txt
 RUN apt-get install libsndfile1 -y
 RUN python3 -m pip install librosa
 
-# Enable the virtual environment and run.
-# CMD ["bash -c && . source .venv/bin/activate"]
+# No entrypoint defined, GitHub CodeSpaces does this automatically.
+# TODO: add an entrypoint for non-codespaces development.
