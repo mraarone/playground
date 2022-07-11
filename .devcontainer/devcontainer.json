@@ -24,6 +24,7 @@
         "ms-python.python",
         "ms-python.vscode-pylance",
         "mechatroner.rainbow-csv",
+        "bierner.markdown-mermaid",
         "oderwat.indent-rainbow",
         "SonarSource.sonarlint-vscode",
         "redhat.vscode-yaml",
