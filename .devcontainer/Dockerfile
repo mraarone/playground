@@ -25,6 +25,8 @@ RUN apt-get install git -y
 WORKDIR /app
 ADD . /app
 
+# Install Virtual Environment requirements
+RUN apt install python3.8-venv
 RUN python3 -m pip install virtualenv
 ENV VIRTUAL_ENV=/app/.venv
 RUN python3 -m venv $VIRTUAL_ENV
