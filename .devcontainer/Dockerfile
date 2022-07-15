@@ -29,7 +29,7 @@ RUN python3 -m venv $VIRTUAL_ENV
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
 ### The rest installs in the virtual environment. ###
-RUN apt-get install apt-utils -y
+# RUN apt-get install apt-utils -y
 RUN apt-get update -y
 
 # Install Git 
