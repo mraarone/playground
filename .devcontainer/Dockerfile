@@ -13,9 +13,6 @@ RUN apt-get update && \
 # Install Libraries
 RUN apt-get install sudo
 
-# Install Java for Sonarlint
-RUN apt-get update -y
-
 # Torch Dependencies
 
 # Set up the Python environment and app location Note: You can't get away from the workspaces folder, 
@@ -32,6 +29,8 @@ RUN python3 -m venv $VIRTUAL_ENV
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
 ### The rest installs in the virtual environment. ###
+RUN apt-get install apt-utils -y
+RUN apt-get update -y
 
 # Install Git 
 RUN apt-get install git -y
