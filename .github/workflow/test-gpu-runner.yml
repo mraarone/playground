@@ -1,0 +1,11 @@
+name: Test GPU Runner
+on: [workflow_dispatch]
+jobs:
+  build:
+
+    runs-on: dvcorg/cml-py3
+
+    steps:
+	- name: Test GPU Runner
+	  run: |
+	    nvidia-smi
