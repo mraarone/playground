@@ -11,7 +11,9 @@ else
     WILL_PUSH=0
 fi
 
-echo ${{ secrets.SECRETS_DOCKER_PASS }} | docker login --username ${{ secrets.SECRETS_DOCKER_USER }} --password-stdin docker.io
+env
+
+# echo ${{ secrets.SECRETS_DOCKER_PASS }} | docker login --username ${{ secrets.SECRETS_DOCKER_USER }} --password-stdin docker.io
 # echo $SECRETS_DOCKER_PASS | docker login -u $SECRETS_DOCKER_USER --password-stdin
 
 #docker buildx build \
