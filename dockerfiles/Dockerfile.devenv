@@ -10,7 +10,7 @@ RUN apt-get update && \
 # Install Libraries
 RUN apt-get install sudo
 
-# Torch Dependencies
+### Torch Dependencies
 
 # Set up the Python environment and app location Note: You can't get away from the workspaces folder, 
 # The environment variable, "CODESPACES_VIRTUAL_FOLDER," isn't known to be changeable. The project file 
