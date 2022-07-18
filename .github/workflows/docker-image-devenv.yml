@@ -5,6 +5,8 @@ on:
     paths:
       - 'dockerfiles/Dockerfile.devenv'
 
+  workflow_dispatch:
+
 jobs:
   build:
     runs-on: ubuntu-latest
