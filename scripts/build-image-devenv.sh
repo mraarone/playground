@@ -11,7 +11,7 @@ else
     WILL_PUSH=0
 fi
 
-docker login -u $SECRETS_DOCKER_USER -p $SECRETS_DOCKER_PASS
+echo $SECRETS_DOCKER_PASS | docker login -u $SECRETS_DOCKER_USER --password-stdin
 
 #docker buildx build \
 #    -t "$GITHUB_REPOSITORY-devenv:latest" \
