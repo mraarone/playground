@@ -1,8 +1,5 @@
 FROM tensorflow/tensorflow
 
-#
-# EXPOSE port
-
 # Install Docker for Docker-in-Docker
 RUN apt-get update && \
     apt-get -qy full-upgrade && \
