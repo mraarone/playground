@@ -1,8 +1,9 @@
 {
     "name": "Playground",
 
-    "dockerFile": "../Dockerfiles/Dockerfile.devenv",
-
+//    "dockerFile": "../Dockerfiles/Dockerfile.devenv",
+    "image": "mraarone/playground-devenv:latest",
+    
     "context": "..",
 
     // "appPort": 3000,
