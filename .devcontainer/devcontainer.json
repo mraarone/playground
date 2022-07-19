@@ -1,10 +1,11 @@
 {
     "name": "Playground",
 
-//    "dockerFile": "../Dockerfiles/Dockerfile.devenv",
+    // This is totally allowed, but VSCode says it isn't, ignore the warning.
     "image": "mraarone/playground-devenv:latest",
-    
-    "context": "..",
+
+//    "build.dockerFile": "../Dockerfiles/Dockerfile.devenv",
+//    "build.context": "..",
 
     // "appPort": 3000,
 
@@ -15,6 +16,7 @@
     ],
 
     // Stop the container from automatically shutting down when vscode is closed.
+    // stopContainer, stopCompose, and none are the three options.
     "shutdownAction": "none",
 
     // Default path to open when attaching to a new container.
