@@ -15,12 +15,16 @@
         "source=//etc/passwd,target=/etc/passwd,type=bind,consistency=cached,ro"
     ],
 
+    // Default path to open when attaching to a new container.
+    "workspaceFolder": "/workspaces/playground",
+
     // Stop the container from automatically shutting down when vscode is closed.
     // stopContainer, stopCompose, and none are the three options.
     "shutdownAction": "none",
 
-    // Default path to open when attaching to a new container.
-    "workspaceFolder": "/workspaces/playground",
+    // VIRTUAL_ENV environment variable is defined and python3-venv is  
+    // installed by RUN command in the Dockerfile.devenv.
+    "postStartCommand": "python3 -m venv $VIRTUAL_ENV",
 
     // Add the IDs of extensions you want installed when the container is created.
     "extensions": [
