@@ -24,7 +24,7 @@
 
     // VIRTUAL_ENV environment variable is defined and python3-venv is  
     // installed by RUN command in the Dockerfile.devenv.
-    "postStartCommand": "python3 -m venv $VIRTUAL_ENV && . /opt/venv/bin/activate && pip install -r requirements.txt",
+    "postStartCommand": "python3 -m venv $VIRTUAL_ENV && source /opt/venv/bin/activate && pip install -r requirements.txt",
 
     // Add the IDs of extensions you want installed when the container is created.
     "extensions": [
