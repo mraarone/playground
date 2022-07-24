@@ -12,10 +12,10 @@ else
 fi
 
 # Docker Hub
-# echo $SECRETS_DOCKER_PASS | docker login -u $SECRETS_DOCKER_USER --password-stdin docker.io
+echo $SECRETS_DOCKER_PASS | docker login -u $SECRETS_DOCKER_USER --password-stdin docker.io
 
 # GitHub Container Repository (ghcr.io)
-echo $SECRETS_GITHUB_TOKEN | docker login -u $SECRETS_GITHUB_USER --password-stdin ghcr.io
+# echo $SECRETS_GITHUB_TOKEN | docker login -u $SECRETS_GITHUB_USER --password-stdin ghcr.io
 
 docker buildx build \
     -t "$GITHUB_REPOSITORY-devenv:$(date +%s)" \
