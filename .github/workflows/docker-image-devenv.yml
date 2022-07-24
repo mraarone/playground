@@ -17,6 +17,7 @@ jobs:
       env:
         SECRETS_DOCKER_USER: ${{ secrets.SECRETS_DOCKER_USER }}
         SECRETS_DOCKER_PASS: ${{ secrets.SECRETS_DOCKER_PASS }}
+        SECRETS_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       run: scripts/build-image-devenv.sh --push
 
