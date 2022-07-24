@@ -10,9 +10,10 @@
     // "appPort": 3000,
 
     "mounts": [
-        "source=//var/run/docker.sock,target=/var/run/docker.sock,type=bind,consistency=cached",
-        "source=//etc/group,target=/etc/group,type=bind,consistency=cached,ro",
-        "source=//etc/passwd,target=/etc/passwd,type=bind,consistency=cached,ro"
+        "source=//var/run/docker.sock,target=/var/run/docker.sock,type=bind,consistency=cached"
+        // ,
+        // "source=//etc/group,target=/etc/group,type=bind,consistency=cached,ro",
+        // "source=//etc/passwd,target=/etc/passwd,type=bind,consistency=cached,ro"
     ],
 
     // Default path to open when attaching to a new container.
@@ -24,7 +25,7 @@
 
     // VIRTUAL_ENV environment variable is defined and python3-venv is  
     // installed by RUN command in the Dockerfile.devenv.
-    "postStartCommand": "python3 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt",
+    "postStartCommand": "python3 -m venv .venv && . .venv/bin/activate", // && pip install -r requirements.txt",
 
     // Add the IDs of extensions you want installed when the container is created.
     "extensions": [

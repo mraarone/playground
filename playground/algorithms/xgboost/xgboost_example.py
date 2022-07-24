@@ -19,18 +19,36 @@ master/data/nba_2017_players_with_salary_wiki_twitter.csv"
 
     def process_data(self):
         # Select the columns from the dataframe. Drop columns with missing data
-        self.data = self.data[["AGE", "POINTS", "SALARY_MILLIONS", "PAGEVIEWS",
-            "TWITTER_FAVORITE_COUNT", "W", "TOV"]].dropna()
+        self.data = self.data[
+            [
+                "AGE",
+                "POINTS",
+                "SALARY_MILLIONS",
+                "PAGEVIEWS",
+                "TWITTER_FAVORITE_COUNT",
+                "W",
+                "TOV",
+            ]
+        ].dropna()
 
         # Define y (target), omega (features), and range(y_hat) (classes)
         self.target = self.data["W"].apply(lambda wins: 1 if wins > 42 else 0)
-        self.features = self.data[["AGE", "POINTS", "SALARY_MILLIONS", "PAGEVIEWS",
-            "TWITTER_FAVORITE_COUNT", "TOV"]]
+        self.features = self.data[
+            [
+                "AGE",
+                "POINTS",
+                "SALARY_MILLIONS",
+                "PAGEVIEWS",
+                "TWITTER_FAVORITE_COUNT",
+                "TOV",
+            ]
+        ]
         self.classes = ["winning", "losing"]
 
         self.x_train, self.x_test, self.y_train, self.y_test = train_test_split(
-            self.features, self.target, test_size=0.25, random_state=0)
-        
+            self.features, self.target, test_size=0.25, random_state=0
+        )
+
         self.print_data()
 
     def create_model(self):

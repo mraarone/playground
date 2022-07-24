@@ -20,7 +20,5 @@ jobs:
 
       run: scripts/build-image-devenv.sh --push
 
-#      docker build . --file Dockerfile --tag my-image-name:$(date +%s)
-
 
 

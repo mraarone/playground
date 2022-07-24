@@ -4,7 +4,6 @@ FROM tensorflow/tensorflow
 RUN apt-get update && \
     apt-get -qy full-upgrade && \
     apt-get install -qy curl && \
-    apt-get install -qy curl && \
     curl -sSL https://get.docker.com/ | sh
 
 # Install Libraries
@@ -19,9 +18,9 @@ WORKDIR /workspaces/playground
 ADD . /workspaces/playground
 
 # Install Virtual Environment requirements
-RUN apt install python3-venv
+RUN apt-get install python3-venv -y
 # RUN python3 -m pip install virtualenv
-ENV VIRTUAL_ENV=/opt/venv
+ENV VIRTUAL_ENV=.venv
 RUN python3 -m venv $VIRTUAL_ENV
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
@@ -46,5 +45,11 @@ RUN python3 -m pip install -r requirements.txt
 RUN apt-get install libsndfile1 -y
 RUN python3 -m pip install librosa
 
-# No entrypoint defined, GitHub CodeSpaces does this automatically.
-# TODO: add an entrypoint for non-codespaces development.
+# GitHub CodeSpaces does not use entrypoint.sh, it runs its own using the devcontainer configuration.
+# When CodeSpaces does that, it detects and automatically activates the detected virtual environment,
+# and sets the python intrepretor to that virtual environment.
+#
+# But, for docker on a developer's PC, the following gets executed.
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]

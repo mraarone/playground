@@ -2,14 +2,15 @@ import unittest
 
 import numpy
 
+
 class Queue:
     def __init__(self, values=[]):
         self.items = numpy.array(values)
         self.size = values.size
-        
+
     def enqueue(self, value):
         self.items = numpy.append(self.items, value)
-    
+
     def dequeue(self):
         if self.items.size == 0:
             return None
@@ -21,4 +22,3 @@ class Queue:
 
     def size(self):
         return self.items.size
-    

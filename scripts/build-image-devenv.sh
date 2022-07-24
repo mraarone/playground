@@ -14,6 +14,12 @@ fi
 echo $SECRETS_DOCKER_PASS | docker login -u $SECRETS_DOCKER_USER --password-stdin docker.io
 
 docker buildx build \
+    -t "$GITHUB_REPOSITORY-devenv:$(date +%s)" \
+    $( (( $WILL_PUSH == 1 )) && printf %s '--push' ) \
+    -f dockerfiles/Dockerfile.devenv \
+    .
+
+docker buildx build \
     -t "$GITHUB_REPOSITORY-devenv:latest" \
     $( (( $WILL_PUSH == 1 )) && printf %s '--push' ) \
     -f dockerfiles/Dockerfile.devenv \
