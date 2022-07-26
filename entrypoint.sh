@@ -2,6 +2,7 @@
 
 pip install -r requirements.txt
 
-source .venv/bin/activate
+. .venv/bin/activate
+
 exec "$@"
 
